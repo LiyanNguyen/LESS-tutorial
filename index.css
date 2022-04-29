@@ -1,0 +1,137 @@
+@import "typo.css";
+body {
+  background-color: red;
+  min-height: 100vh;
+  display: flex;
+}
+/*=======
+VARIABLES
+=======*/
+#header {
+  width: 50px;
+  height: 10rem;
+}
+/*====
+MIXINS
+====*/
+#menu a {
+  color: #111;
+  border-top: dotted 1px red;
+  border-bottom: solid 2px red;
+}
+.post a {
+  color: red;
+  border-top: dotted 1px blue;
+  border-bottom: solid 2px blue;
+}
+/*=====
+NESTING
+=====*/
+#header {
+  color: black;
+}
+#header .navigation {
+  font-size: 12px;
+}
+#header .logo {
+  width: 300px;
+}
+#header .logo:hover {
+  width: 250px;
+}
+.clearfix {
+  display: block;
+  zoom: 1;
+}
+.clearfix:after {
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/*==========================
+NESTED AT-RULES AND BUBBLING
+==========================*/
+.component {
+  width: 300px;
+}
+@media (min-width: 768px) {
+  .component {
+    width: 600px;
+  }
+}
+@media (min-width: 768px) and (min-resolution: 192dpi) {
+  .component {
+    background-image: url(/img/retina2x.png);
+  }
+}
+@media (min-width: 1280px) {
+  .component {
+    width: 800px;
+  }
+}
+/*========
+OPERATIONS
+========*/
+.anotherCustomClass {
+  background-color: #223355;
+}
+/*==============
+calc() exception
+==============*/
+.customClass {
+  width: calc(50% + (25vh - 20px));
+}
+/*======
+ESCAPING
+======*/
+@media (min-width: 768px) {
+  .element {
+    font-size: 1.2rem;
+  }
+}
+/*=======
+FUNCTIONS
+=======*/
+.class {
+  width: 50%;
+  color: #f6430f;
+  background-color: #f8b38d;
+}
+/*======================
+NAMESPACES AND ACCESSORS
+======================*/
+#header a {
+  color: orange;
+  display: block;
+  border: 1px solid black;
+  background-color: grey;
+}
+#header a:hover {
+  background-color: white;
+}
+#header a li {
+  color: gray;
+  background-color: blue;
+}
+/*==
+MAPS
+==*/
+.button {
+  color: blue;
+  border: 1px solid green;
+}
+/*===
+SCOPE
+===*/
+#page #header {
+  color: white;
+}
+/*======
+COMMENTS
+======*/
+/*=======
+IMPORTING
+=======*/
